@@ -1,0 +1,313 @@
+@font-face{
+    src: url("savedfonts/awake-regular-webfont.ttf");
+    font-family: awake;
+}
+@font-face{
+    src: url(savedfonts/donovan.ttf);
+    font-family: donovan;
+    font-weight: bold;
+}
+@font-face{
+    src: url("savedfonts/viro-webfont.ttf");
+    font-family: viro;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+section[id]{
+    padding:30px 15px;
+}
+section[id="welcome"]{
+    padding: 250px 15px;
+    background-image: url("image/img_lights.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+}
+header{
+    padding: 20px 15px;
+    background-color: black;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-family: awake;
+}
+nav a#lending{
+    font-size: 2em;
+}
+nav a#contribute{
+    font-size: 1.2em;
+    padding: 5px;
+    margin-top: 4px;
+    box-shadow: 0px 0px 0px snow;
+    float: right;
+    transition: box-shadow 1s linear 0s;
+    border: 2px dashed snow;
+}
+nav a#contribute:hover{
+    box-shadow: 0px 0px 15px snow;
+}
+section[id="welcome"] h1, section[id="welcome"] p{
+    font-family: donovan;
+    color: white;
+}
+div.feature-ctn{
+    width: 30%;
+    background-color: snow;
+    margin: 17px auto;
+    /* display: inline; */
+    resize: horizontal;
+    overflow: auto;
+    padding: 13px;
+    border-radius: 25px 0px 25px 0px;
+    box-shadow: 0px 0px 20px gray;
+}
+div.feature-ctn i{
+    font-size: 5.5em;
+    display: block;
+    padding: 0% 4% 0% 4%;
+    box-sizing: border-box;
+    margin: auto;
+    width: 35%;
+    color: limegreen;
+
+}
+div.feature-ctn i.proper{
+    width: 20%;
+}
+div.feature-ctn b{
+    display: block;    
+    color: limegreen;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin: 10px 0px;
+}
+div.feature-ctn span{
+    display: block;
+    color: dodgerblue;
+    text-align: center;
+    line-height: 1.4em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section[id="testimonials"] h1{
+    font-family: awake;
+    text-align: center;
+    margin: 10px 0px 30px 0px;
+    font-size: 2.5em;
+}
+section[id="products"]{
+    border: 1px solid black;
+    background: linear-gradient(to left,rgb(212, 79, 79),rgb(212, 166, 166));
+}
+section[id="products"] h1{
+    font-family: awake;
+    text-align: center;
+    margin: 10px 0px 30px 0px;
+    font-size: 2.5em;
+}
+section[id="products"] fieldset{
+    border: none;
+    border-radius: 15px;
+    background-color: snow;
+    box-shadow: 0px 0px 13px gray;
+}
+section[id="products"] div{
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+section[id="products"] img{
+    flex-grow: 5;
+    width: 200px;
+    height: 200px;
+    margin: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 0px snow;
+    transition: margin 2s linear 0s, height 2s ease 0s, width 2s ease 0s, box-shadow 2s linear 0s, transform 2s linear 0s;
+}
+section[id="products"] img:hover{
+    height: 250px;
+    width: 250px;
+    margin: 3px 3px 3px 3px;
+    box-shadow: 0px 0px 13px gray;
+}
+section[id="inspirations"] h1{
+    font-family: awake;
+    text-align: center;
+    margin: 10px 0px 30px 0px;
+    font-size: 2.5em;
+}
+section[id="inspirations"] span{
+    display: block;
+    padding: 10px;
+    font-family: awake;
+    text-align: center;
+    font-size: 1.3em;
+    margin: 10px auto;
+}
+section[id="links-to-ours"] h1{
+    font-family: awake;
+    text-align: center;
+    margin: 10px 0px 50px 0px;
+    font-size: 2.5em;
+}
+section[id="links-to-ours"] a{
+    text-decoration: none;
+    color: snow;
+    background-color: black;
+    padding: 20px;
+    font-family: awake;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    width: auto;
+    border-radius: 10px;
+    animation: change 10s linear 0s infinite alternate;
+}
+@keyframes change{
+    from{
+        background-color: black;
+        border: 2px solid black;
+        color: snow;
+    }
+    to{
+        background-color: snow;
+        border: 2px solid black;
+        color: black;
+    }
+}
+section[id="signup"] article{
+    column-count: auto;
+    font-family: awake;
+    text-align: left;
+    column-width: 250px;
+    font-size: 1.3em;
+    column-gap: 20px;
+    column-rule: 2px dotted gray;
+}
+section[id="signup"] h1{
+    column-span: all;
+    font-family: awake;
+    text-align: center;
+    font-size: 2em;
+    padding: 10px;
+    border-radius: 15px 15px 0px 0px;
+    background-color: gray;
+    border: 1px solid black;
+}
+footer{
+    background-color: black;
+    padding: 15px 15px;
+
+}
+footer h3{
+    font-family: donovan;
+    color: white;
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: bold;
+}
+footer address{
+    margin: 20px 0px;
+}
+.footer-links{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: white;
+    margin: 0px 3%;
+}
+/* for screens max-width to be: 400px e.g: iphone6 */
+@media screen and ( max-width: 400px ){
+    div.feature-ctn{
+        width: 90%;
+        background-color: snow;
+        margin: 17px auto;
+        /* resize: horizontal; */
+        /* overflow: auto; */
+        padding: 13px;
+        border-radius: 25px 0px 25px 0px;
+        box-shadow: 0px 0px 20px gray;
+    }
+    div.feature-ctn i{
+        font-size: 5.5em;
+        display: block;
+        padding: 0% 4% 0% 4%;
+        box-sizing: border-box;
+        margin: auto;
+        width: 35%;
+        color: limegreen;
+    
+    }
+    section[id="welcome"] h1{
+        font-family: donovan;
+        font-size: 2em;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+    }
+    section[id="welcome"] p{
+        font-family: donovan;
+        font-size: 1.3em;
+        font-weight: normal;
+        color:white;
+        text-align: center;
+    }
+    footer h3{
+        font-family: donovan;
+        color: white;
+        font-size: 1.5em;
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+    }
+    .footer-links{
+        text-decoration: none;
+        font-size: 1.3em;
+        color: white;
+        margin: 0px 4.5%;
+    }
+    section[id="links-to-ours"] a{
+        text-decoration: none;
+        color: snow;
+        background-color: black;
+        padding: 20px;
+        font-family: awake;
+        display: block;
+        font-size: 1.3em;
+        margin: 10px auto;
+        text-align: center;
+        width: auto;
+        border-radius: 10px;
+        animation: change 10s linear 0s infinite alternate;
+    }
+    @keyframes change{
+        from{
+            background-color: black;
+            border: 2px solid black;
+            color: snow;
+        }
+        to{
+            background-color: snow;
+            border: 2px solid black;
+            color: black;
+        }
+    }
+    div.feature-ctn span{
+        display: block;
+        color: dodgerblue;
+        text-align: center;
+        line-height: 1.7em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    div.feature-ctn b{
+        display: block;    
+        color: limegreen;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        margin: 10px 0px;
+        font-size: 1.4em;
+    }
+}
