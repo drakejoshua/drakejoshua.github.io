@@ -3,7 +3,7 @@
     font-family: awake;
 }
 @font-face{
-    src: url(savedfonts/donovan.ttf);
+    src: url("savedfonts/donovan.ttf");
     font-family: donovan;
     font-weight: bold;
 }
