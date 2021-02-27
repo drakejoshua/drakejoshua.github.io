@@ -25,7 +25,7 @@ section[id="welcome"]{
     background-repeat: no-repeat;
     background-origin: border-box;
 }
-header{
+header nav{
     padding: 20px 15px;
     background-color: black;
 }
@@ -37,17 +37,21 @@ nav a{
 nav a#lending{
     font-size: 2em;
 }
-nav a#contribute{
-    font-size: 1.2em;
-    padding: 5px;
-    margin-top: 4px;
-    box-shadow: 0px 0px 0px snow;
-    float: right;
-    transition: box-shadow 1s linear 0s;
-    border: 2px dashed snow;
+nav > i{
+    display: none;
 }
-nav a#contribute:hover{
-    box-shadow: 0px 0px 15px snow;
+nav > input{
+    display: none;
+}
+nav > div{
+    display: inline;
+    margin-top: 2px;
+    padding: 9px 10px 8px 10px;
+    float: right;
+}
+div a{
+    font-size: 1.3em;
+    margin-left: 25px;
 }
 section[id="welcome"] h1, section[id="welcome"] p{
     font-family: donovan;
@@ -57,7 +61,6 @@ div.feature-ctn{
     width: 30%;
     background-color: snow;
     margin: 17px auto;
-    /* display: inline; */
     resize: horizontal;
     overflow: auto;
     padding: 13px;
@@ -309,5 +312,38 @@ footer address{
         text-align: center;
         margin: 10px 0px;
         font-size: 1.4em;
+    }
+    nav > i{
+        display: inline;
+        color: snow;
+        position: relative;
+        left: 60%;
+        z-index: 0;
+    }
+    nav > input{
+        display: inline;
+        position: relative;
+        left: 52.5%;
+        opacity: 0;
+        visibility: visible;
+        z-index: 1;
+    }
+    nav > div{
+        display: none;
+    }
+    div a{
+        font-size: 1.3em;
+        margin-left: 15px;
+        display: block;
+        padding: 10px 0px 10px 0px;
+        background-color: black;
+    }
+    nav input:checked ~ div{
+        display: block;
+        width: 100%;
+        margin-top: 25px;
+        padding: 0px;
+        float: none;
+        border-top: 2px solid snow;
     }
 }
