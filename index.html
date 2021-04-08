@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- made by mabawonku joshua...call on +2348118351573 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c963c47e7a.js" crossorigin="anonymous"></script>
+    <title>Welcome</title>
+    <base href="">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url(images/Lighthouse.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        #cover{
+            font-size: 1.5em;
+            color: snow;
+            font-family: candara,Arial, Helvetica, sans-serif;
+            margin: 1.8% 0% 0% 70%;
+        }
+        #widgets{
+            position: relative;
+            left: 0;
+            padding: 30px;
+            margin-top: 35%;
+        }
+        #widgets-item{
+            position: absolute;
+            left: 50px;
+        }
+        #widgets-item a{
+            text-decoration: none;
+            color: black;
+            background-color: rgba(250, 250, 250, 0.7);
+            padding: 20px;
+            font-size: 1em;
+            margin-left: 10px;
+            font-family: candara;
+            border-radius: 20px 0px 20px 0px;
+        }
+        #widgets-clock{
+            position: absolute;
+            left: 850px;
+            color: snow;
+            font-size: 1.5em;
+            font-family: candara;
+        }
+        #hours ,#minutes{
+            font-size: 2em;
+        }
+        .far{
+            float: left;
+            font-size: 2em;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cover">
+        <span class="far fa-user"></span>
+        <span class="cover-text" id="welcome-text"> Welcome, Joshua.</span><br>
+        <span class="cover-text" id="greeting-text"></span>
+    </div>
+
+    <div id="widgets">
+        <div id="widgets-item">
+            <a href="mylibrary.html" target="_blank">My Libary</a>
+            <a href="https://google.com" target="_blank"> <i class="fab fa-google"></i> </a>
+            <a href="http://bing.com" target="_blank" rel="noopener noreferrer"> <i class="fab fa-bing"></i> </a>
+        </div>
+        <div id="widgets-clock">
+            <span id="hours"></span>
+            <span id="minutes"></span><br>
+            <span id="day"></span>
+            <span id="date"></span>
+            <span id="month"></span>
+        </div>
+    </div>
+    <script src="date-worker.js"></script>
+</body>
+</html>
