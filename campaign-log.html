@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <base href="">
+    <link rel="stylesheet" href="campaignlog-style.css">
+    <script src="https://kit.fontawesome.com/c963c47e7a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="javascript:void(0)" id="topNavLink"><i class="fas fa-campground"></i> </a>
+            <a href="javascript:void(0)" class="otherNavLinks"> Store </a>
+            <a href="javascript:void(0)" id="first" class="otherNavLinks"> DashBoard </a>
+        </nav>
+    </header>
+    <aside>
+        <div id="inAside">
+            <a href="javascript:void(0)" class="sideNavLink" id="active"><i class="fas fa-user"></i></a>
+            <a href="javascript:void(0)" class="sideNavLink"><i class="fas fa-dolly"></i></a>
+            <a href="javascript:void(0)" class="sideNavLink"><i class="fas fa-store"></i></a>
+            <a href="javascript:void(0)" class="sideNavLink"><i class="fas fa-wallet"></i></a>
+        </div>
+    </aside>
+    <div id="mainContent">
+        <section class="summary">
+            <h4 id="different">Profile Summary</h4>
+            <i class="fas fa-user" id="profileLogo"></i>
+            <span class="profileId">name: joshua</span>
+            <span class="profileId"> email: dragge@gmail.com</span>
+            <span class="profileId">tel: 08118351573</span>
+        </section>
+        <section class="summary">
+            <h4>Cart Summary</h4>
+            <div id="table-ctn">
+                <table>
+                    <tr>
+                        <th>S/N</th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Rate</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Imagine Dragons - Origins</td>
+                        <td>1</td>
+                        <td>$3</td>
+                        <td>$3</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Westlife - Spectrum</td>
+                        <td>1</td>
+                        <td>$2</td>
+                        <td>$2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Justin Bieber- journals</td>
+                        <td>1</td>
+                        <td>$3</td>
+                        <td>$3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Imagine Dragons - Follow You</td>
+                        <td>1</td>
+                        <td>$3</td>
+                        <td>$3</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <section class="summary">
+            <h4>Recently Viewed In Videos</h4>
+            <div id="videoSuperiorContainer">
+                <div class="videoCtn">
+                    <video autoplay loop muted height="200px">
+                        <source src="videos\Pexels Videos 3545.mp4" type="video/mp4">
+                    </video>
+                    <span class="videoInfo">3545th video of Pexels</span>
+                    <a href="videos\Pexels Videos 3545.mp4" download="3545th video of Pexels" class="videoDownload">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+                <div class="videoCtn">
+                    <video autoplay loop muted height="200px" width="200px">
+                        <source src="videos\Pexels Videos 3708.mp4" type="video/mp4">
+                    </video>
+                    <span class="videoInfo">3708th video of Pexels </span>
+                    <a href="videos\Pexels Videos 3708.mp4" download="3708th video of Pexels" class="videoDownload">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="summary">
+            <h4>Recently Viewed In Audios</h4>
+            <div id="audioSuperiorContainer">
+                <div class="audioCtn">
+                    <audio loop controls>
+                        <source src="audios\alexander-nakarada-apocalypse-blues.mp3" type="audio/mp3">
+                    </audio>
+                    <span class="audioInfo">apocalypse blues-alexander nakarada</span>
+                    <a href="audios\alexander-nakarada-apocalypse-blues.mp3" download="apocalypse blues-alexander nakarada" class="videoDownload">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+                <div class="audioCtn">
+                    <audio loop controls>
+                        <source src="mixaund-brighter-days-ahead.mp3" type="audio/mp3">
+                    </audio>
+                    <span class="audioInfo">brighter days ahead-mixaund</span>
+                    <a href="audios\mixaund-brighter-days-ahead.mp3" type="audio/mp3" download="brighter days ahead-mixaund" class="videoDownload">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

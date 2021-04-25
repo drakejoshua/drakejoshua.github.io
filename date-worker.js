@@ -56,4 +56,5 @@ function myTimer(){
     document.getElementById("month").innerHTML = monthName[month] ;
 }
 
-
+//end of code
+//made by mabawonku joshua..major..13/4/2021

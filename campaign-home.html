@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>campaign</title>
+    <link rel="stylesheet" href="campaign-syle.css">
+    <script src="https://kit.fontawesome.com/c963c47e7a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="" id="top-nav-text"> <i class="fas fa-campground"></i></a>
+        </nav>
+    </header>
+    <section>
+        <h1>one stop place for all your camping needs</h1>
+        <p>campaign is a one stop place for all your needs during camping</p>
+        <form action="javascript:void(0)" autocomplete="on" id="form">
+            <h4>Welcome, Sign Up</h4>
+            <input type="text" id="nameInput" placeholder="your name"><br>
+            <input type="email" id="emailInput" placeholder="your email"><br>
+            <input type="password" id="passwordInput" placeholder="your password"><br>
+                <div id="passCommentPane">
+                    <i>password security range:</i><br><br/>
+                    <span id="firstPassBar"></span><span id="secondPassBar"></span><span id="thirdPassBar"></span><br><br>
+                </div>
+            <input type="checkbox" name="" id="checkBox">
+            <i>i agree to the <a href="javascript:void(0)">terms and conditions</a></i><br><br>
+            <button id="submitInput"> log in</button>
+        </form>
+        <div id="signedUpDisplay">
+            <i class="fas fa-check"></i><br>
+            <a href="campaign-log.html">Go To Dashboard</a>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

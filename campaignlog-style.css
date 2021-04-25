@@ -1,0 +1,208 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    position: sticky;
+    top: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+nav{
+    padding: 20px 20px;
+    background-color: snow;
+    box-shadow: -5px 0px 6px rgb(102, 97, 97);
+}
+nav a#topNavLink{
+    color: white;
+    font-size: 3em;
+    color: rgb(189, 46, 46);
+    text-shadow: 0px 0px 13px rgb(212, 173, 173);
+    text-decoration: none;
+}
+nav a.otherNavLinks{
+    display: block;
+    float: right;
+    font-size: 1.3em;
+    font-family: candara;
+    color: rgb(189, 46, 46);
+    text-decoration: none;
+    margin: 20px 10px 0px 15px;
+}
+nav a#first{
+    margin: 12px 0px 0px 765px;
+    padding: 8px;
+    background-color: rgb(189, 46, 46);
+    color: snow;
+    border-radius: 10px;
+}
+aside{
+    width: 7%;
+    box-sizing: border-box;
+    float: left;
+    box-shadow: 0px 2px 6px rgb(102, 97, 97);
+}
+#inAside{
+    padding: 10px 0px;
+    margin: 250px 0px 270px 0px;
+}
+.sideNavLink{
+    display: block;
+    padding: 0px auto;
+    color: rgb(189, 46, 46);
+    font-size: 1.5em;
+    text-decoration: none;
+    text-align: center;
+    margin: 40px 0px;
+}
+#active{
+    border-left: 5px solid rgb(189, 46, 46);
+}
+#mainContent{
+    padding: 30px;
+    float:right;
+    width: 93%;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: url(images/pexels-philippe-donn-1257860.jpg);
+    justify-content: space-around;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.summary{
+    padding: 28px;
+    width: 45%;
+    height: 350px;
+    background-color: snow;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgb(211, 201, 201);
+    margin: 30px 0px 0px 0px;
+    border-radius: 10px;
+}
+.summary h4{
+    font-family: candara, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    padding: 0px 10px;
+    margin: 17px 0px 10px 0px;
+}
+.summary h4#different{
+    font-family: candara, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+    padding: 0px 10px;
+    margin: 17px 0px 70px 0px;
+}
+.summary #profileLogo{
+    font-size: 4em;
+    float: left;
+    color: rgb(189, 46, 46);
+    margin: 5px 10px 5px 10px;
+}
+.summary .profileId{
+    display: block;
+    margin: 5px 50px 5px 10px;
+    float: left;
+    color: rgb(189, 46, 46);
+}
+.summary div#table-ctn{
+    height: 200px;
+    overflow: auto;
+}
+th, td{
+    text-align: left;
+    border-collapse: collapse;
+    padding: 10px;
+    color: rgb(189, 46, 46);
+    font-family: candara;
+}
+th, td{
+    border-bottom: 2px solid rgb(189, 46, 46);
+}
+
+.summary .videoCtn{
+    width: 90%;
+    padding: 18px;
+    margin-top: 10px;
+    border: 1px solid rgb(189, 46, 46);
+    border-radius: 10px;
+}
+.videoCtn video{
+    display: block;
+    width: inherit;
+    margin: 10px auto;
+    object-fit: fill;
+    border-radius: 10px;
+}
+.videoCtn span{
+    display: block;
+    padding: inherit;
+    text-align: center;
+    font-family: candara;
+    color:rgb(189, 46, 46);
+}
+.videoCtn a{
+    color: snow;
+    display: block;
+    background-color: rgb(189, 46, 46);
+    padding: inherit;
+    text-align: center;
+    border-radius: 10px;
+}
+.videoCtn a:hover{
+    color: rgb(189, 46, 46);
+    display: block;
+    background-color: snow;
+    padding: inherit;
+    text-align: center;
+    border-radius: 10px;
+    border:1px solid rgb(189, 46, 46);
+}
+.summary #videoSuperiorContainer{
+    height: 200px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.summary #audioSuperiorContainer{
+    height: 200px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.summary .audioCtn{
+    width: 90%;
+    padding: 18px;
+    margin-top: 10px;
+    border: 1px solid rgb(189, 46, 46);
+    border-radius: 10px;
+}
+.audioCtn audio{
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+.audioCtn span{
+    display: block;
+    padding: inherit;
+    text-align: center;
+    font-family: candara;
+    color:rgb(189, 46, 46);
+}
+.audioCtn a{
+    color: snow;
+    display: block;
+    background-color: rgb(189, 46, 46);
+    padding: inherit;
+    text-align: center;
+    border-radius: 10px;
+}
+.audioCtn a:hover{
+    color: rgb(189, 46, 46);
+    display: block;
+    background-color: snow;
+    padding: inherit;
+    text-align: center;
+    border-radius: 10px;
+    border:1px solid rgb(189, 46, 46);
+}
