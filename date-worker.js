@@ -1,3 +1,4 @@
+//comparison section for rendering the greeting at different parts of the day
 switch( new Date().getHours()){
     case 0:
     case 1:
@@ -33,8 +34,14 @@ switch( new Date().getHours()){
         console.error();
 }
 
+//interval to keep the clock running
 setInterval( myTimer, 1000);
 
+/*
+ the clock section which holds the dates and days but also compares 
+ for the rendering of the minutes and hours correctly at different 
+ times of the day
+*/
 function myTimer(){
     let date = new Date();
     var hours = date.getHours();
@@ -45,16 +52,22 @@ function myTimer(){
     let dayName = ["sun","mon","tue","wed","thurs","fri","sat"];
     let monthName = ["january","february","march","april","may",
     "june","july","august","september","october","november","december"];
-    if( minutes <= 10 ){
+    if( minutes < 10 ){
         document.getElementById("minutes").innerHTML = ":" + "0" + minutes ; 
     }else{
         document.getElementById("minutes").innerHTML = ":" + minutes ; 
     }
-    document.getElementById("hours").innerHTML = hours ; 
+    if ( hours < 10 ) {
+        document.getElementById("hours").innerHTML = "0" + hours ; 
+    } else {
+        document.getElementById("hours").innerHTML = hours ; 
+    }
+    
     document.getElementById("day").innerHTML = dayName[day] + "," ;
     document.getElementById("date").innerHTML = dateNumber ; 
     document.getElementById("month").innerHTML = monthName[month] ;
 }
+
 
 //end of code
 //made by mabawonku joshua..major..13/4/2021
