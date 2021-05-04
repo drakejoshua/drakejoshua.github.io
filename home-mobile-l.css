@@ -1,54 +1,57 @@
+/* for iphones 6+,7+,8+ and pixel series and other typical series  */
+
+
 body{
     margin: 0;
     padding: 0;
-    position: relative;
-    left: 0;
 }
 nav{
-    padding: 20px 40px;
-    background-color: rgba(183, 86, 231, 0.2);
-    position: fixed;
-    top: 0;
-    width: 100%;
+    padding: 20px 20px;
+    background-color: snow;
+    position: static;
+    width: initial;
 }
 nav a{
     color: rgb(189, 46, 46);
-    font-size: 3.5em;
+    font-size: 2.5em;
     text-shadow: 0px 0px 13px rgb(212, 173, 173);
 }
 section{
     background-image: url(images/pexels-philippe-donn-1257860.jpg) ;
-    padding: 214px 30px;
+    padding: 120px 25px;
     background-size: cover;
     background-repeat: no-repeat;
 }
 section h1{
-    font-size: 2.8em;
+    font-size: 2em;
     color: white;
     font-family: candara, sans-serif;
-    width:35%;
-    margin: 10px 0px;
+    width: initial;
+    margin: 30px 0px;
+    text-align: left;
 }
 section p{
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: white;
     font-family: candara, sans-serif;
-    width:35%;
+    width: initial;
+    margin: 15px 0px 55px 0px;
+    text-align: right;
 }
 section form{
-   position: absolute;
-   top: 20%;
-   left: 63%;
-   padding: 30px 40px;
+   padding: 40px 30px;
    background-color: snow;
    border-radius: 10px;
+   width: 60%;
+   position: static;
+   margin: auto;
 }
 form input , form button{
     display: block;
     padding: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: slateblue;
-    font-size: 1em;
+    font-size: 0.8em;
     margin: auto;
     border: 1px solid slateblue;
     border-radius: 10px;
@@ -58,9 +61,6 @@ form button{
     background-color: rgba(106, 90, 205, 0.5);
     color: white;
 }
-form input[type="checkbox"]{
-    margin: 0;
-}
 form h4{
     font-family: candara, Geneva, Tahoma, sans-serif;
     color: slateblue;
@@ -68,9 +68,9 @@ form h4{
     text-align: center;
 }
 form span{
-    padding: 3px 40px;
+    padding: 3px 35px;
     background-color: slateblue;
-    margin: 20px 3px 10px 3px;
+    margin: 20px 3px 10px 0px;
     color: snow;
     border-radius: 10px;
 }
@@ -80,13 +80,15 @@ form div{
 form i{
     font-family: candara,Arial, Helvetica, sans-serif;
 }
-
+form input[type="checkbox"]{
+    margin-left: 0;
+}
 form input[type="text"]:focus, form input[type="email"]:focus, form input[type="password"]:focus{
     display: block;
     padding: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: slateblue;
-    font-size: 1em;
+    font-size: 0.8em;
     margin: auto;
     outline: none;
     border-top: none;
@@ -99,15 +101,14 @@ form input[type="text"]:focus, form input[type="email"]:focus, form input[type="
 
 section form + div{
     display: none;
-    position: absolute;
-    top: 25%;
-    left: 66.9%;
+    position: static;
     box-sizing: border-box;
     height: 461.781px;
     width: 247px;
     padding: 25px 40px;
     background-color: snow;
     border-radius: 10px;
+    margin: auto;
 }
 
 #signedUpDisplay i{

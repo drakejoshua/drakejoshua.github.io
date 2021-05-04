@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loader library</title>
+    <script src="https://kit.fontawesome.com/c963c47e7a.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        button{
+            padding: 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.3em;
+            font-family: candara;
+            font-weight: bold;
+            margin: 30px 0px 0px 30px;
+            background-color: rgb(125, 235, 158);
+        }
+        section{
+            width: 80%;
+            height: 40%;
+            box-shadow: 0px 0px 10px lightgray;
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        section h3{
+            color: rgb(125, 235, 158);
+            font-family: candara,Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .animationCtn{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .loaders{
+            margin: 30px;
+        }
+        #firstLoader{
+            padding: 15px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50px;
+            animation: spin 1s linear 0s infinite normal;
+        }
+        @keyframes spin{
+            0%{
+                border-top: 5px solid black;
+                border-bottom: 5px solid snow;
+                border-left: 5px solid snow;
+                border-right: 5px solid snow;
+            }
+            33.33%{
+                border-right: 5px solid black;
+                border-bottom: 5px solid snow;
+                border-left: 5px solid snow;
+                border-top: 5px solid snow;
+            }
+            66.66%{
+                border-bottom: 5px solid black;
+                border-top: 5px solid snow;
+                border-left: 5px solid snow;
+                border-right: 5px solid snow;
+            }
+            100%{
+                border-left: 5px solid black;
+                border-bottom: 5px solid snow;
+                border-top: 5px solid snow;
+                border-right: 5px solid snow;
+            }
+        }
+        #secondLoader{
+            padding: 15px;
+            width: 10px;
+            height: 10px;
+            border-bottom: 5px solid black;
+            border-top: 5px solid snow;
+            border-left: 5px solid snow;
+            border-right: 5px solid snow;
+            border-radius: 50px;
+            animation: spin-change 1s linear 0s infinite normal;
+        }
+        @keyframes spin-change{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        #thirdLoader{
+            padding: 15px;
+            width: 10px;
+            height: 10px;
+            border-bottom: 5px dotted black;
+            border-top: 5px solid snow;
+            border-left: 5px solid snow;
+            border-right: 5px solid snow;
+            border-radius: 50px;
+            animation: spinall 2s linear 0s infinite normal;
+        }
+        @keyframes spinall{    
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        #carousel{
+            padding: 40px;
+            width: 18%;
+        }
+        .subLoaders{
+            padding: 15px;
+            background-color: black;
+            border: 2px solid black;
+            float: left;
+            margin: 0px 7px;
+            border-radius: 50px;
+        }
+        .icons{
+            font-size: 3em;
+            margin: 0px 30px;
+            color: rgb(34, 110, 57);
+        }
+    </style>
+</head>
+<body>
+    <button onclick="location.assign('/projects/mylibrary.html')">
+        <i class="fas fa-arrow-left"></i> Back
+    </button>
+    <section>
+        <h3> HTML curated Loaders</h3>
+        <div class="animationCtn">
+            <div class="loaders" id="firstLoader"></div>
+            <div class="loaders" id="secondLoader"></div>
+        </div>
+    </section>
+    <section>
+        <h3> HTML/Javascript curated Loaders</h3>
+        <div class="animationCtn">
+            <div class="loaders" id="thirdLoader"></div>
+            <div id="carousel">
+                <span class="subLoaders"></span>
+                <span class="subLoaders"></span>
+                <span class="subLoaders"></span>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h3> font awesome curated Loaders</h3>
+        <div class="animationCtn">
+            <span class="fab fa-first-order-alt fa-pulse icons"></span>
+            <span class="fas fa-futbol fa-pulse icons"></span>
+            <span class="fas fa-spinner fa-pulse icons"></span>
+            <span class="fas fa-splotch fa-pulse icons"></span>
+            <span class="fas fa-stop-circle fa-pulse icons"></span>
+            <span class="fas fa-times fa-pulse icons"></span>
+            <span class="fas fa-times-circle fa-pulse icons"></span>
+            <span class="fas fa-circle-notch fa-pulse icons"></span>
+            </div>
+        </div>
+    </section>
+    <script>
+        //for the dooted-loader
+        let loader = document.getElementById("thirdLoader");
+        let runTimer = 0;
+        setInterval(() => {
+            let arry = [1, 0, 1, 0, 1, 0, 1, 0, 1];
+            switch( arry[runTimer] ){
+                case 0:
+                    loader.style.visibility = "visible";
+                    runTimer ++;
+                break;
+                case 1:
+                    loader.style.visibility = "hidden";
+                    runTimer ++;
+                break;
+                default:
+                    console.error("error in animation code");
+            }
+            if( runTimer ==  8 ){
+                runTimer = 0;
+            }
+        }, 3000 );
+
+        //for the carousel
+        let subLoaders = document.getElementsByClassName("subLoaders");
+        let runSecondTimer = 0;
+        setInterval(() => {
+            switch( runSecondTimer ){
+                case 0:
+                subLoaders[ 0 ].style.backgroundColor = "snow";
+                subLoaders[ 1 ].style.backgroundColor = "black";
+                subLoaders[ 2 ].style.backgroundColor = "black";
+                runSecondTimer ++ ;
+                break;
+                case 1:
+                subLoaders[ 0 ].style.backgroundColor = "black";
+                subLoaders[ 1 ].style.backgroundColor = "snow";
+                subLoaders[ 2 ].style.backgroundColor = "black";
+                runSecondTimer ++ ;
+                break;
+                case 2:
+                subLoaders[ 0 ].style.backgroundColor = "black";
+                subLoaders[ 1 ].style.backgroundColor = "black";
+                subLoaders[ 2 ].style.backgroundColor = "snow";
+                runSecondTimer ++ ;
+                break;
+                default:
+                    console.log("error in animation code");
+            }
+            if ( runSecondTimer == 3 ){
+                runSecondTimer = 0;
+            }
+        }, 200);
+    </script>
+</body>
+</html>
