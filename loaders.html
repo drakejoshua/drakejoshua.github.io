@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>loader library</title>
-    <script src="https://kit.fontawesome.com/c963c47e7a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/all.css">
     <style>
         body{
             margin: 0;
@@ -37,8 +37,10 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-around;
         }
-        .loaders{
+        .loaders, svg{
             margin: 30px;
         }
         #firstLoader{
@@ -50,25 +52,25 @@
         }
         @keyframes spin{
             0%{
-                border-top: 5px solid black;
+                border-top: 5px solid rgb(34, 110, 57);
                 border-bottom: 5px solid snow;
                 border-left: 5px solid snow;
                 border-right: 5px solid snow;
             }
             33.33%{
-                border-right: 5px solid black;
+                border-right: 5px solid rgb(34, 110, 57);
                 border-bottom: 5px solid snow;
                 border-left: 5px solid snow;
                 border-top: 5px solid snow;
             }
             66.66%{
-                border-bottom: 5px solid black;
+                border-bottom: 5px solid rgb(34, 110, 57);
                 border-top: 5px solid snow;
                 border-left: 5px solid snow;
                 border-right: 5px solid snow;
             }
             100%{
-                border-left: 5px solid black;
+                border-left: 5px solid rgb(34, 110, 57);
                 border-bottom: 5px solid snow;
                 border-top: 5px solid snow;
                 border-right: 5px solid snow;
@@ -78,7 +80,7 @@
             padding: 15px;
             width: 10px;
             height: 10px;
-            border-bottom: 5px solid black;
+            border-bottom: 5px solid rgb(34, 110, 57);
             border-top: 5px solid snow;
             border-left: 5px solid snow;
             border-right: 5px solid snow;
@@ -97,7 +99,7 @@
             padding: 15px;
             width: 10px;
             height: 10px;
-            border-bottom: 5px dotted black;
+            border-bottom: 5px dotted rgb(34, 110, 57);
             border-top: 5px solid snow;
             border-left: 5px solid snow;
             border-right: 5px solid snow;
@@ -114,14 +116,28 @@
         }
         #carousel{
             padding: 40px;
-            width: 18%;
+            width: 20%;
+        }
+        #wavy{
+            padding: 40px;
+        }
+        #writer{
+            padding: 40px;
         }
         .subLoaders{
             padding: 15px;
-            background-color: black;
-            border: 2px solid black;
+            border: 5px solid rgb(34, 110, 57);
             float: left;
+            background-color: rgb(34, 110, 57);
             margin: 0px 7px;
+            border-radius: 50px;
+        }
+        .wavyDots{
+            padding: 8px;
+            background-color: black;
+            float: left;
+            margin: 14px 7px;
+            background-color: rgb(34, 110, 57);
             border-radius: 50px;
         }
         .icons{
@@ -129,32 +145,91 @@
             margin: 0px 30px;
             color: rgb(34, 110, 57);
         }
+        #circle{
+            animation: enlarge-shrink 2s ease-in-out 0s infinite alternate;
+        }
+        @keyframes enlarge-shrink{
+            from{
+                transform: scale( 0.2, 0.2);
+            }
+            to{
+                transform: scale( 1, 1);
+            }
+        }
+        #selfWritingText{
+            color: rgb(34, 110, 57);
+            font-size: 1.3em;
+            font-weight: bold;
+            font-family: candara, Arial, Helvetica, sans-serif;
+        }
+        #writer{
+            text-align: center;
+            width: 10%;
+            vertical-align: middle;
+        }
+        #gravityContainer{
+            padding: 40px;
+            width: 18%;
+            position: relative;
+            left: 0;
+        }
+        .gravityBalls{
+            padding: 8px;
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            background-color: rgb(34, 110, 57);
+            border-radius: 50px;
+        }
     </style>
 </head>
 <body>
-    <button onclick="location.assign('/projects/mylibrary.html')">
+    <button onclick="location.assign('mylibrary.html')">
         <i class="fas fa-arrow-left"></i> Back
     </button>
     <section>
-        <h3> HTML curated Loaders</h3>
+        <h3> HTML curated animations</h3>
         <div class="animationCtn">
             <div class="loaders" id="firstLoader"></div>
             <div class="loaders" id="secondLoader"></div>
+            <svg width="100" height="100">
+                <circle id="circle" cx="50" cy="50" r="50" fill="rgb(34, 110, 57)"/>
+            </svg>
         </div>
     </section>
     <section>
-        <h3> HTML/Javascript curated Loaders</h3>
+        <h3> HTML/Javascript curated animations</h3>
         <div class="animationCtn">
             <div class="loaders" id="thirdLoader"></div>
+
+
             <div id="carousel">
                 <span class="subLoaders"></span>
                 <span class="subLoaders"></span>
                 <span class="subLoaders"></span>
             </div>
+
+
+            <div id="wavy">
+                <span class="wavyDots" id="firstWavyDot"></span>
+                <span class="wavyDots" id="secondWavyDot"></span>
+                <span class="wavyDots" id="thirdWavyDot"></span>
+                <span class="wavyDots" id="fourthWavyDot"></span>
+                <span class="wavyDots" id="fifthWavyDot"></span>
+                <span class="wavyDots" id="sixthWavyDot"></span>
+                <span class="wavyDots" id="seventhWavyDot"></span>
+                <span class="wavyDots" id="eighthWavyDot"></span>
+            </div>
+
+            <div id="writer">
+                <span id="selfWritingText"></span>
+            </div>
+
+            <div id="gravityContainer"></div>
         </div>
     </section>
     <section>
-        <h3> font awesome curated Loaders</h3>
+        <h3> font awesome curated animations</h3>
         <div class="animationCtn">
             <span class="fab fa-first-order-alt fa-pulse icons"></span>
             <span class="fas fa-futbol fa-pulse icons"></span>
@@ -167,10 +242,19 @@
             </div>
         </div>
     </section>
+    <section>
+        <h3> SVG/Javascript curated animations</h3>
+        <div class="animationCtn">
+            <svg width="100" height="100">
+                <circle id="secondCircle" cx="50" cy="50" r="50" fill="rgba(34, 110, 57, 0.7)" />
+            </svg>
+        </div>
+    </section>
     <script>
-        //for the dooted-loader
+        //for the dotted-loader
         let loader = document.getElementById("thirdLoader");
         let runTimer = 0;
+        //the interval which hides and visualize the spinner
         setInterval(() => {
             let arry = [1, 0, 1, 0, 1, 0, 1, 0, 1];
             switch( arry[runTimer] ){
@@ -190,26 +274,28 @@
             }
         }, 3000 );
 
-        //for the carousel
+        //for the carousel-like loader
         let subLoaders = document.getElementsByClassName("subLoaders");
         let runSecondTimer = 0;
         setInterval(() => {
+            //the computing switch which decides the white loader
+            //and blackens the rest using the values of the second runtimer
             switch( runSecondTimer ){
                 case 0:
                 subLoaders[ 0 ].style.backgroundColor = "snow";
-                subLoaders[ 1 ].style.backgroundColor = "black";
-                subLoaders[ 2 ].style.backgroundColor = "black";
+                subLoaders[ 1 ].style.backgroundColor = "rgb(34, 110, 57)";
+                subLoaders[ 2 ].style.backgroundColor = "rgb(34, 110, 57)";
                 runSecondTimer ++ ;
                 break;
                 case 1:
-                subLoaders[ 0 ].style.backgroundColor = "black";
+                subLoaders[ 0 ].style.backgroundColor = "rgb(34, 110, 57)";
                 subLoaders[ 1 ].style.backgroundColor = "snow";
-                subLoaders[ 2 ].style.backgroundColor = "black";
+                subLoaders[ 2 ].style.backgroundColor = "rgb(34, 110, 57)";
                 runSecondTimer ++ ;
                 break;
                 case 2:
-                subLoaders[ 0 ].style.backgroundColor = "black";
-                subLoaders[ 1 ].style.backgroundColor = "black";
+                subLoaders[ 0 ].style.backgroundColor = "rgb(34, 110, 57)";
+                subLoaders[ 1 ].style.backgroundColor = "rgb(34, 110, 57)";
                 subLoaders[ 2 ].style.backgroundColor = "snow";
                 runSecondTimer ++ ;
                 break;
@@ -220,6 +306,152 @@
                 runSecondTimer = 0;
             }
         }, 200);
+
+        //for the eccentric-enlarging-shrinking dot
+        let runThirdTimer = 50 ;
+        let svgCircle = document.getElementById("secondCircle");
+        //function to enlarge the circle
+        function shrink(){
+            let enlargeInterval = setInterval(() => {
+                svgCircle.r.baseVal.value = runThirdTimer ;
+                runThirdTimer -= 2 ;
+                if ( runThirdTimer == 10 ) {
+                    clearInterval( enlargeInterval );
+                    enlarge();
+                }
+            }, 50);
+        }
+        //function to shrink the circle after enlargement
+        function enlarge(){
+            let shrinkInterval = setInterval(() => {
+                svgCircle.r.baseVal.value = runThirdTimer ;
+                runThirdTimer += 2 ;
+                if ( runThirdTimer == 50 ) {
+                    clearInterval( shrinkInterval );
+                    shrink();
+                }
+            }, 50);
+        }
+        shrink();
+
+        //for the wavy dots
+        let runFourthTimer = 0;
+        let wavyDots = document.getElementsByClassName("wavyDots");
+        setInterval(() => {
+            wavyDots[ runFourthTimer ].style.margin = "14px 7px";
+            setTimeout(() => {
+                wavyDots[ runFourthTimer ].style.margin = "4px 7px";
+            }, 100);
+            runFourthTimer ++ ;
+            if ( runFourthTimer == wavyDots.length ) {
+                runFourthTimer = 0;
+            }
+        }, 200);
+
+        //for the self-writing text
+        let  selfWritingText = document.getElementById("selfWritingText");
+        let displayText = " ";
+        let runFifthTimer = 0 ;
+        //the array from which we read the letters of the used word
+        let runningArray = ["w","e","l","c","o","m","e"];
+        //the writing function which writes the letters out
+        function writer(){
+            let writingInterval = setInterval(() => {
+                selfWritingText.innerHTML = displayText ;
+                displayText += runningArray[ runFifthTimer ];
+                runFifthTimer ++ ;
+                if ( runFifthTimer == 8 ) {
+                    clearInterval( writingInterval );
+                    eraser();
+                }
+            }, 300);
+        }
+        //the erasing function which erases all the wriiten letters after some period
+        function eraser() {
+            setTimeout(() => {
+                displayText = " ";
+                runFifthTimer = 0;
+                writer();
+            }, 100);
+        }
+        writer();
+
+        // for the gravity-bouncing balls
+        // class for the balls
+        class gravityBall{
+            constructor(speed, height, maximumHeight, index){
+                this.speed = speed;
+                this.height = height;
+                this.maximumHeight = maximumHeight;
+                this.index = index;
+            }
+            //method to render the balls
+            render(){
+                let parent = document.getElementById("gravityContainer");
+                let child = document.createElement("span");
+                child.setAttribute("class", "gravityBalls");
+                parent.appendChild( child );
+                child.style.left = ( leftMargin += 21 ) + "px";
+            }
+            //method to move the balls
+            move(){
+                gravityBalls[ this.index ].style.bottom = this.height + "px";
+                this.moveDown()
+            }
+            moveDown() {
+                    let downInterval = setInterval(() => {
+                        gravityBalls[ this.index ].style.bottom = this.height + "px";
+                        this.height -= this.speed ;
+                        if( this.height <= 0 ){
+                            clearInterval( downInterval );
+                            this.moveUp();
+                        }
+                    }, 20);
+            }
+            moveUp() {
+                    let upInterval = setInterval(() => {
+                        this.height += this.speed;
+                        gravityBalls[ this.index ].style.bottom = this.height + "px";
+                        if ( this.height >= this.maximumHeight ) {
+                            clearInterval( upInterval );
+                            this.moveDown();
+                        }
+                    }, 20);
+            }
+        }
+        // creating leftMargin variable to space out balls
+        let leftMargin = 1;
+        //creating classList for the balls
+        let gravityBalls = document.getElementsByClassName("gravityBalls");
+
+        //creating new span elements as balls also rendering and moving them
+        let gravityBall1 = new gravityBall(2, 50, 50, 0);
+        gravityBall1.render();
+        gravityBall1.move();
+        let gravityBall2 = new gravityBall(1, 50, 50, 1);
+        gravityBall2.render();
+        gravityBall2.move();
+        let gravityBall3 = new gravityBall(3, 50, 50, 2);
+        gravityBall3.render();
+        gravityBall3.move();
+        let gravityBall4 = new gravityBall(2, 50, 50, 3);
+        gravityBall4.render();
+        gravityBall4.move();
+        let gravityBall5 = new gravityBall(1, 50, 50, 4);
+        gravityBall5.render();
+        gravityBall5.move();
+        let gravityBall6 = new gravityBall(3, 50, 50, 5);
+        gravityBall6.render();
+        gravityBall6.move();
+        let gravityBall7 = new gravityBall(2, 50, 50, 6);
+        gravityBall7.render();
+        gravityBall7.move();
+        let gravityBall8 = new gravityBall(1, 50, 50, 7);
+        gravityBall8.render();
+        gravityBall8.move();
+        let gravityBall9 = new gravityBall(3, 50, 50, 8);
+        gravityBall9.render();
+        gravityBall9.move();
     </script>
 </body>
 </html>
