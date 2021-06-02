@@ -1,0 +1,17 @@
+Ae - for motion and video editing to give visual effects and motion graphics
+An - for animation and 2d video development
+Au - used for mixing and sound production
+Br - sister program to photoshop used for manipulating and managing media collection
+Ch - used for animation of puppets which are drawn in phtoshop or ilustrator
+Dn - used in product design and 3d visualization
+Dw - used in drag and drop but also coding web development 
+Ai - used in development of vector graphics and design: logos
+Ic - used in word processing
+Id - used in design of banner graphics such as: posters, flyers
+Lr - used as a media editing software with photoshop
+Me - used in video editing and format conversion to different formats
+Mu - used in developing drag and drop web develpment
+Ps - used for photo editing and digital paint jobs
+Pr - used for video editing and production of hd formats neccessary for distribution
+Xd -  used for designing wireframes, workflows and prototypes used in ui/ux design
+Pl - used inline with premiere pro for video editing
